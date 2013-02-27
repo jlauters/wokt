@@ -1,0 +1,64 @@
+extends layout
+
+block content
+
+  div.navbar.navbar-inverse.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        button.btn.btn-navbar(type="button", data-toggle="collapse", data-target=".nav-collapse")
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href="/")=title
+        div.nav-collapse.collapse
+          ul.nav
+            li.active
+              a(href="/") Home
+            li
+              a(href="/about/") About
+            li
+              a(href="/contact/") Contact
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown") Dropdown
+                b.caret
+              ul.dropdown-menu
+               li
+                 a(href="#") Action
+               li
+                 a(href="#") Something Else
+           form.navbar-form.pull-right
+             input.span2(type="text", placeholder="Email")
+             input.span2(type="password", placeholder="Password")
+             button.btn(type="submit") Sign in
+
+  div.container
+    div.hero-unit
+      h1 What's Kolby Been Brewing?
+      p Kolby rocks!, I wanted a better way to know what Kolby has been brewing, and any guest beers
+        | he has on tap. I plan to filter his Facebook / Instagram feed to pull any pics of his brew process
+        | he decides to share with us. Maybe this will inspire him to share more ;)
+
+   
+    h3 currently on tap ...
+    div.row
+      div.span3
+        h2 (tap 1) SSP
+        p Smoked Serrano Porter
+      div.span3
+        h2 (tap 2) BRIPA
+        p Black Rye IPA
+      div.span3
+        h2 (tap 3) Guest: Titan IPA
+      div.span3
+        h2 (tap 4) Guest: Arrogant Bastard
+  
+    h3 on deck ...
+    div.row
+      div.span3
+        h2 Tequila Mocking Bird
+
+    footer
+      p &copy; 2013
+
+  script(src="/bootstrap/docs/assets/js/jquery.js")
+  script(src="/bootstrap/docs/assets/js/bootstrap-dropdown.js")
