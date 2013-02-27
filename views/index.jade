@@ -11,21 +11,6 @@ block content
           span.icon-bar
         a.brand(href="/")=title
         div.nav-collapse.collapse
-          ul.nav
-            li.active
-              a(href="/") Home
-            li
-              a(href="/about/") About
-            li
-              a(href="/contact/") Contact
-            li.dropdown
-              a.dropdown-toggle(href="#", data-toggle="dropdown") Dropdown
-                b.caret
-              ul.dropdown-menu
-               li
-                 a(href="#") Action
-               li
-                 a(href="#") Something Else
            form.navbar-form.pull-right
              input.span2(type="text", placeholder="Email")
              input.span2(type="password", placeholder="Password")
@@ -39,22 +24,44 @@ block content
         | he decides to share with us. Maybe this will inspire him to share more ;)
 
    
-    h3 currently on tap ...
+    div.page-header
+      h1 currently on tap ...
     div.row
       div.span3
-        h2 (tap 1) SSP
-        p Smoked Serrano Porter
+        span.label.label-info Tap 1
+        h2 SSP
+        ul.thumbnails
+          li.span3
+            a.thumbnail(href='http://sphotos-a.xx.fbcdn.net/hphotos-snc7/c0.0.403.403/p403x403/419757_4704013356464_1522872332_n.jpg')
+              img(data-src="http://sphotos-a.xx.fbcdn.net/hphotos-snc7/c0.0.403.403/p403x403/419757_4704013356464_1522872332_n.jpg",
+src="http://sphotos-a.xx.fbcdn.net/hphotos-snc7/c0.0.403.403/p403x403/419757_4704013356464_1522872332_n.jpg", alt="")
+            h3 Smoked Serrano Porter
+            p Smoked Serrano porter is tasting delicious on a snowy night. #homebrew
       div.span3
-        h2 (tap 2) BRIPA
+        span.label.label-info Tap 2
+        h2 BRIPA
         p Black Rye IPA
       div.span3
-        h2 (tap 3) Guest: Titan IPA
+        span.label.label-info Tap 3
+        span.badge.badge-success Guest
+        h2 Titan IPA
       div.span3
-        h2 (tap 4) Guest: Arrogant Bastard
+        span.label.label-info Tap 4
+        span.badge.badge-success Guest
+        h2 Arrogant Bastard
   
-    h3 on deck ...
+    div.page-header
+      h1 aging ...
     div.row
       div.span3
+        span.badge.badge-success Bottled
         h2 Tequila Mocking Bird
+        ul.thumbnails
+          li.span3
+            a.thumbnail(href='http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg')
+              img(data-src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg",
+src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg", alt='')
+              h3 bottled Tequila Mocking Bird
+              p Enjoying a Maracaibo Especial by Jolly Pumpkin after bottling The Tequila Mocking Bird. #homebrew #jollypumpkin
 
-  include footer
+    include footer
