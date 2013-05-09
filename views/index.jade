@@ -11,7 +11,7 @@ block content
           span.icon-bar
         a.brand(href="/")=title
         div.nav-collapse.collapse
-           form.navbar-form.pull-right
+           //form.navbar-form.pull-right
              input.span2(type="text", placeholder="Email")
              input.span2(type="password", placeholder="Password")
              button.btn(type="submit") Sign in
@@ -27,7 +27,7 @@ block content
     div.page-header
       h1 currently on tap ...
     div.row
-      div.span3
+      div#tap1.span3
         span.label.label-info Tap 1
         h2 SSP
         ul.thumbnails
@@ -37,17 +37,17 @@ block content
 src="http://sphotos-a.xx.fbcdn.net/hphotos-snc7/c0.0.403.403/p403x403/419757_4704013356464_1522872332_n.jpg", alt="")
             h3 Smoked Serrano Porter
             p Smoked Serrano porter is tasting delicious on a snowy night. #homebrew
-      div.span3
+      div#tap2.span3
         span.label.label-info Tap 2
         h2 BRIPA
         p Black Rye IPA
-      div.span3
+      div#tap3.span3
         span.label.label-info Tap 3
-        span.badge.badge-success Guest
+        span.badge.badge-success.pad Guest
         h2 Titan IPA
-      div.span3
+      div#tap4.span3
         span.label.label-info Tap 4
-        span.badge.badge-success Guest
+        span.badge.badge-success.pad Guest
         h2 Arrogant Bastard
   
     div.page-header
@@ -61,7 +61,7 @@ src="http://sphotos-a.xx.fbcdn.net/hphotos-snc7/c0.0.403.403/p403x403/419757_470
             a.thumbnail(href='http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg')
               img(data-src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg",
 src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.403.403/p403x403/16523_4824773415390_871221020_n.jpg", alt='')
-              h3 bottled Tequila Mocking Bird
-              p Enjoying a Maracaibo Especial by Jolly Pumpkin after bottling The Tequila Mocking Bird. #homebrew #jollypumpkin
+            h3 bottled Tequila Mocking Bird
+            p Enjoying a Maracaibo Especial by Jolly Pumpkin after bottling The Tequila Mocking Bird. #homebrew #jollypumpkin
 
     include footer

@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf-8")
     title= title
-    meta(name="viewport", content="width=device-width", initial-scale="1.0")
+    meta(name="viewport", content="width=device-width")
     meta(name="description", content="")
     meta(name="author", content="")
     link(rel='stylesheet', href='/bootstrap/docs/assets/css/bootstrap.css')
@@ -19,4 +19,42 @@ html
     link(rel="apple-touch-icon-precomposed", href="/bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png")
     link(rel="shortcut icon", href="/boostrap/docs/assets/ico/favicon.png")
   body
+    div#fb-root(style="display:none;")
+    script 
+      window.fbAsyncInit = function() {
+        FB.init({
+            appId: '344801335641246',
+            status: true,
+            cookie: true,
+            oauth: true,
+            xfbml: true
+        }); // aditional initialization for event listeners etc here 
+
+        FB.getLoginStatus(function(response) {
+            if(response.authResponse) {
+                FB.api('/me/posts?access_token=' + response.authResponse.accessToken, function(response) {
+                    //console.log(response);
+                    beerParse(response.data);
+                });
+            } else {
+                FB.login(function(response) {
+                    if(response.authResponse) {
+                       FB.api('/me/posts?access_token=' + response.authResponse.accessToken, function(response) {
+                           console.log(response);
+                           beerParse(response.data);
+                       }); 
+                    }
+                }, {scope: 'read_stream'});
+            }
+        });
+
+        };
+        // Load async SDK source 
+        (function(d, debug) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if(d.getElementById(id)) {return;}
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document, /*debug*/ false));
     block content

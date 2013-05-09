@@ -1,38 +1,9 @@
 
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}*/
-
 body {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
-a {
-  color: #00B7FF;
-}
-
-#tap1, #tap2, #tap3, #tap4 {
-    display: inline;
-    float: left;
-    text-align: center;
-    padding: 0;
-    width: 220px;
-    height: 100px;
-    margin:10px 0 0 30px;
-}
-
-#tap1 h3, #tap2 h3, #tap3 h3, #tap4 h3 {
-    font-size: 1.3em;
-    line-height:26px;
-    font-style: bold;
-}
-
-#tap1 span, #tap2 span, #tap3 span, #tap4 span {
-    display:inline-block;
-    width: 80%;
-    font-size: 1em;
-    line-height: 0;
-    vertical-align: middle;
+span.pad {
+    margin-left: 3px;
 }
